@@ -48,3 +48,4 @@ MonoBehaviour:
   hit_SFX: {fileID: 8300000, guid: 19dbdf0c4cdd73c49a9b1a3c071a78a0, type: 3}
   flying_SFX: {fileID: 8300000, guid: beb924b8a2fc7a14dbd8ca2c2e8da55c, type: 3}
   soundObject: {fileID: 6987631349057746567, guid: 2bba68e9a7b9e9542b46c356829fb24e, type: 3}
+  sfxMixer: {fileID: 24100000, guid: 16fdff98ece79f944afe4bc88ef6bafb, type: 2}

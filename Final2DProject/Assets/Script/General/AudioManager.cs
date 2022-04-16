@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip landing_SFX, pick_SFX, hit_SFX, flying_SFX;
 
     public GameObject soundObject;
+
+    public AudioMixer sfxMixer;
 
     private void Awake()
     {
@@ -44,5 +47,12 @@ public class AudioManager : MonoBehaviour
         newObject.GetComponent<AudioSource>().clip = sfx;
         //Play that sound sfx
         newObject.GetComponent<AudioSource>().Play();
+        newObject.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("sfxVolume");
+    }
+
+    public void SettingAudio(float volume)
+    {
+        sfxMixer.SetFloat("sfxVolume", volume);
+        PlayerPrefs.SetFloat("sfxVolume", volume);
     }
 }
